@@ -1,0 +1,181 @@
+version         = io500-sc20_v3-72-g4a5dde36301e
+config-hash     = DB82F9A3
+result-dir      = ./results/2021.04.20-08.15.37
+mode            = extended
+; START 2021-04-20 08:15:37
+; ERROR INVALID stonewall-time != 300s
+
+
+[ior-easy-write]
+t_start         = 2021-04-20 08:15:37
+exe             = ./ior -C -Q 1 -g -G 745481093 -k -e -o /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.04.20-08.15.37/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.15.37/ior-easy-write.csv
+throughput-stonewall = 26.89
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 23.232635
+t_delta         = 41.6723
+t_end           = 2021-04-20 08:16:19
+
+[ior-rnd-write]
+t_start         = 2021-04-20 08:16:19
+exe             = ./ior -Q=1 -g -G=-1329284987 -z --random-offset-seed=11 -e -o=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/ior-rnd/file -O stoneWallingStatusFile=./results/2021.04.20-08.15.37/ior-rnd.stonewall -O stoneWallingWearOut=1 -t=4096 -b=1073741824 -s=10000000 -w -D 30 -a POSIX -k -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.15.37/ior-rnd-write.csv
+throughput-stonewall = 0.01
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 0.006252
+t_delta         = 35.3849
+t_end           = 2021-04-20 08:16:54
+
+[mdtest-easy-write]
+t_start         = 2021-04-20 08:16:54
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1631658887 -N 1 -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-easy -x ./results/2021.04.20-08.15.37/mdtest-easy.stonewall -C -Y -W 30 --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-easy-write.csv -a POSIX
+rate-stonewall  = 23.042659
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 22.232925
+t_delta         = 37.3068
+t_end           = 2021-04-20 08:17:31
+
+[mdworkbench-create]
+t_start         = 2021-04-20 08:17:31
+filesPerProc    = 1333
+precreatePerSet = 1333
+exe             = ./md-workbench --process-reports -a POSIX -o=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2021.04.20-08.15.37/mdworkbench.status -D=10 -G=-677280947 -P=1333 -I=1333 -1
+maxOpTime       = 0.567090
+score           = 20.067535
+t_delta         = 33.3940
+t_end           = 2021-04-20 08:18:05
+
+[timestamp]
+t_start         = 2021-04-20 08:18:05
+score           = 0.000000
+t_delta         = 0.0006
+t_end           = 2021-04-20 08:18:05
+
+[find-easy]
+t_start         = 2021-04-20 08:18:05
+; ERROR INVALID Resulting score shouldn't be 0.0
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2021-04-20 08:18:05
+
+[ior-hard-write]
+t_start         = 2021-04-20 08:18:05
+exe             = ./ior -C -Q 1 -g -G=745491781 -k -e -o /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/ior-hard/file -O stoneWallingStatusFile=./results/2021.04.20-08.15.37/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 8500 -w -D 30 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.15.37/ior-hard-write.csv
+; ERROR INVALID Runtime of phase (0.000023) is below stonewall time. This shouldn't happen!
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2021-04-20 08:18:05
+
+[mdtest-hard-write]
+t_start         = 2021-04-20 08:18:05
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631669575 -N 1 -F -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-hard -x ./results/2021.04.20-08.15.37/mdtest-hard.stonewall -C -Y -W 30 --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-hard-write.csv -a POSIX
+rate-stonewall  = 9.315522
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 8.715646
+t_delta         = 40.2470
+t_end           = 2021-04-20 08:18:45
+
+[find]
+t_start         = 2021-04-20 08:18:45
+; ERROR INVALID Resulting score shouldn't be 0.0
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2021-04-20 08:18:45
+
+[ior-rnd-read]
+t_start         = 2021-04-20 08:18:45
+exe             = ./ior -Q=1 -g -G=-1329284987 -z --random-offset-seed=11 -e -o=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/ior-rnd/file -O stoneWallingStatusFile=./results/2021.04.20-08.15.37/ior-rnd.stonewall -O stoneWallingWearOut=1 -t=4096 -b=1073741824 -s=10000000 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.15.37/ior-rnd-read.csv
+score           = 0.023640
+t_delta         = 9.5486
+t_end           = 2021-04-20 08:18:55
+
+[find-hard]
+t_start         = 2021-04-20 08:18:55
+; ERROR INVALID Resulting score shouldn't be 0.0
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2021-04-20 08:18:55
+
+[mdworkbench-bench]
+t_start         = 2021-04-20 08:18:55
+filesPerProc    = 1333
+precreatePerSet = 1333
+exe             = ./md-workbench --process-reports -a POSIX -o=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2021.04.20-08.15.37/mdworkbench.status -D=10 -G=-677280947 -P=1333 -I=1333 -2 -R=2 -X
+maxOpTime       = 1.118269
+scoreIteration0 = 36.888406
+maxOpTime0      = 1.216576
+score           = 37.798298
+t_delta         = 143.7160
+t_end           = 2021-04-20 08:21:18
+
+[ior-easy-read]
+t_start         = 2021-04-20 08:21:18
+exe             = ./ior -C -Q 1 -g -G 745481093 -k -e -o /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.04.20-08.15.37/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.15.37/ior-easy-read.csv
+score           = 17.726839
+t_delta         = 54.3572
+t_end           = 2021-04-20 08:22:13
+
+[mdtest-easy-stat]
+t_start         = 2021-04-20 08:22:13
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1631658887 -N 1 -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-easy -x ./results/2021.04.20-08.15.37/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-easy-stat.csv -a POSIX
+score           = 108.192933
+t_delta         = 7.5361
+t_end           = 2021-04-20 08:22:20
+
+[ior-hard-read]
+t_start         = 2021-04-20 08:22:20
+exe             = ./ior -C -Q 1 -g -G=745491781 -k -e -o /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/ior-hard/file -O stoneWallingStatusFile=./results/2021.04.20-08.15.37/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 8500 -r -R -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.15.37/ior-hard-read.csv
+; ERROR INVALID Resulting score shouldn't be 0.0
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2021-04-20 08:22:20
+
+[mdtest-hard-stat]
+t_start         = 2021-04-20 08:22:20
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631669575 -N 1 -F -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-hard -x ./results/2021.04.20-08.15.37/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-hard-stat.csv -a POSIX
+score           = 33.096029
+t_delta         = 10.0325
+t_end           = 2021-04-20 08:22:30
+
+[mdworkbench-delete]
+t_start         = 2021-04-20 08:22:30
+filesPerProc    = 1333
+precreatePerSet = 1333
+exe             = ./md-workbench --process-reports -a POSIX -o=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2021.04.20-08.15.37/mdworkbench.status -D=10 -G=-677280947 -P=1333 -I=1333 -3
+maxOpTime       = 0.646639
+score           = 28.398378
+t_delta         = 23.6147
+t_end           = 2021-04-20 08:22:54
+
+[mdtest-easy-delete]
+t_start         = 2021-04-20 08:22:54
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1631658887 -N 1 -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-easy -x ./results/2021.04.20-08.15.37/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-easy-delete.csv -a POSIX
+score           = 22.105029
+t_delta         = 37.0512
+t_end           = 2021-04-20 08:23:31
+
+[mdtest-hard-read]
+t_start         = 2021-04-20 08:23:31
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631669575 -N 1 -F -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-hard -x ./results/2021.04.20-08.15.37/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-hard-read.csv -a POSIX
+score           = 13.208204
+t_delta         = 25.0959
+t_end           = 2021-04-20 08:23:56
+
+[mdtest-hard-delete]
+t_start         = 2021-04-20 08:23:56
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1631669575 -N 1 -F -d /mnt/lustre02/work/ka1094/k2020/frank/s3bench/lustre-io500-vi4io-29302693/mdtest-hard -x ./results/2021.04.20-08.15.37/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2021.04.20-08.15.37/mdtest-hard-delete.csv -a POSIX
+score           = 8.213993
+t_delta         = 40.4949
+t_end           = 2021-04-20 08:24:37
+
+[SCORE]
+MD              = 0.000000
+BW              = 0.000000
+SCORE           = 0.000000 [INVALID]
+hash            = 770B057F
+
+[SCOREX]
+MD              = 0.000000
+BW              = 0.000000
+SCORE           = 0.000000 [INVALID]
+hash            = D8E40E17
+; END 2021-04-20 08:24:37

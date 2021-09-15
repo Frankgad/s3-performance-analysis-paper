@@ -1,0 +1,13 @@
+[1607210592.609703] [mg100:3238 :0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1607210592.630541] [mg100:3238 :0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607210592.639498] [mg100:3238 :0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607210596.443476] [mg102:38664:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2500.00
+[1607210596.472305] [mg102:38664:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607210596.489642] [mg102:38664:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+Args: /home/dkrz/k203134/tools/emb/io500/bin/md-workbench "-1" "-a=S3-libs3" "--S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443" "--S3-libs3.access-key=foo" "--S3-libs3.secret-key=foo" "-R" "1" "--latency-all" "-D" "10" "-P" "300" "-I" "100" "-L" "/home/dkrz/k203134/tests/ibm-2-io500/20201206-002308-1tpn/latency" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl"
+WARNING: S3 S3_init:509 (path:ior96) "ErrorBucketAlreadyExists": Container ior96 exists 
+MD-Workbench total objects: 8000 workingset size: 22.322 MiB (version: 3.4.0+dev) time: 2020-12-06 00:23:19
+precreate process max:385.94s min:203.55s mean: 294.74s balance:52.7 stddev:129.0 rate:15.6 iops/s dsets: 20 objects:6000 rate:0.052 dset/s rate:15.5 obj/s tp:0.1 MiB/s op-max:1.7561e+00s (0 errs) create(5.9248e-02s, 6.4616e-02s, 1.1603e-01s, 1.2333e-01s, 1.2749e-01s, 1.7665e-01s, 1.7561e+00s)
+WARNING: S3 S3_final:521 (path:ior96) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 
+WARNING: S3 S3_final:521 (path:ior96) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 
+Total runtime: 6760550s time: 2020-12-06 00:26:43

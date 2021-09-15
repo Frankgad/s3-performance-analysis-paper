@@ -1,0 +1,2 @@
+IO500 version io500-sc20_v3-72-g4a5dde36301e (extended)
+[RESULT]       ior-easy-write        2.018420 GiB/s : time 35.216 seconds [INVALID]

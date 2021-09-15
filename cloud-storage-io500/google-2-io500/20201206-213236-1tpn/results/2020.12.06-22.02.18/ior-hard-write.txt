@@ -1,0 +1,42 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Dec  6 22:26:47 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.12.06-22.02.18/ior-hard/file -O stoneWallingStatusFile=./results/2020.12.06-22.02.18/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+Machine             : Linux mg101
+WARNING: S3 S3_init:509 (path:ior777) "ErrorBucketAlreadyOwnedByYou": Your previous request to create the named bucket succeeded and you already own it. 
+TestID              : 0
+StartTime           : Sun Dec  6 22:26:48 2020
+Path                : ./datafiles/2020.12.06-22.02.18/ior-hard/file
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.12.06-22.02.18/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+stonewallingTime    : 300
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 488 max: 1017 -- min data: 0.0 GiB mean data: 0.0 GiB time: 625.5s
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 47008
+WARNING: Using actual aggregate bytes moved = 95614272
+WARNING: Maybe caused by deadlineForStonewalling
+write     0.000023   0.000523   953.01      45.91      45.91      3891114    3892067    3891609    3892067    0   
+WARNING: S3 S3_final:521 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 

@@ -1,0 +1,39 @@
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May  3 01:07:42 2021
+Command line        : ./ior -C -Q 1 -g -G 760918788 -k -e -o /work/ku0598/s3bench/lustre-io500-vi4io-29532329/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.05.03-01.07.42/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a POSIX -O saveRankPerformanceDetailsCSV=./results/2021.05.03-01.07.42/ior-easy-write.csv
+Machine             : Linux m10900
+TestID              : 0
+StartTime           : Mon May  3 01:07:42 2021
+Path                : /work/ku0598/s3bench/lustre-io500-vi4io-29532329/ior-easy/ior_file_easy.00000000
+FS                  : 20835.6 TiB   Used FS: 83.5%   Inodes: 5974.4 Mi   Used Inodes: 8.9%
+
+Options: 
+api                 : POSIX
+apiVersion          : 
+test filename       : /work/ku0598/s3bench/lustre-io500-vi4io-29532329/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 5
+tasks               : 50
+clients per node    : 10
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 473.02 TiB
+stonewallingTime    : 30
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 4711 max: 8097 -- min data: 9.2 GiB mean data: 12.4 GiB time: 30.4s
+WARNING: Expected aggregate file size       = 520093696000000
+WARNING: Stat() of aggregate file size      = 849031987200
+WARNING: Using actual aggregate bytes moved = 849031987200
+WARNING: Maybe caused by deadlineForStonewalling
+write     15649      7826       0.000008    10158080000 2048.00    0.007482   51.73      0.001793   51.74      0   

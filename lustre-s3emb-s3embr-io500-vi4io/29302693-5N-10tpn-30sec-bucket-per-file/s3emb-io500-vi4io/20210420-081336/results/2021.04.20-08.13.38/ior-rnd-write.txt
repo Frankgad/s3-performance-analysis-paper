@@ -1,0 +1,35 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Tue Apr 20 08:14:14 2021
+Command line        : ./ior -Q=1 -g -G=-1329285114 -z --random-offset-seed=11 -e -o=./datafiles/ior-rnd/file -O stoneWallingStatusFile=./results/2021.04.20-08.13.38/ior-rnd.stonewall -O stoneWallingWearOut=1 -t=4096 -b=1073741824 -s=10000000 -w -D 30 -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29302693 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey --S3-libs3.bucket-per-file -k -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.13.38/ior-rnd-write.csv
+Machine             : Linux m10643
+TestID              : 0
+StartTime           : Tue Apr 20 08:14:14 2021
+Path                : ./datafiles/ior-rnd/file
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/ior-rnd/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 5
+tasks               : 50
+clients per node    : 10
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 1 GiB
+aggregate filesize  : 488281.25 TiB
+stonewallingTime    : 30
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: S3 S3_Create:238 (path:ior987-_datafiles_iorrnd_fileb) "libS3EmbeddedStatus": (null) 
+04/20/2021 08:14:14: Process 0: FAILED in TestIoSys, Cannot create file

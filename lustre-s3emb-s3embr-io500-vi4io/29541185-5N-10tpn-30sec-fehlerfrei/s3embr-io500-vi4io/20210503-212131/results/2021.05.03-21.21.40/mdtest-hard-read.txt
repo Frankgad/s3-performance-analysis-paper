@@ -1,0 +1,33 @@
+WARNING: S3 S3_init:544 (path:ior987) "libS3Remote": (null) 
+-- started at 05/03/2021 21:28:48 --
+
+mdtest-3.4.0+dev was launched with 50 total task(s) on 5 node(s)
+Command line used: ./mdtest '-n' '1000000' '-t' '-w' '3901' '-e' '3901' '-P' '-G=1647140164' '-N' '1' '-F' '-d' './datafiles/mdtest-hard' '-x' './results/2021.05.03-21.21.40/mdtest-hard.stonewall' '-E' '-X' '--saveRankPerformanceDetails=./results/2021.05.03-21.21.40/mdtest-hard-read.csv' '-a' 'S3-libs3' '--S3-libs3.host=/work/ku0598/s3bench/s3embr-io500-vi4io-29541185' '--S3-libs3.secret-key=secretkey' '--S3-libs3.access-key=accesskey'
+Path                : ./datafiles/mdtest-hard
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: 0.0%
+Nodemap: 11111111110000000000000000000000000000000000000000
+V-0: Rank   0 Line  2477 Shifting ranks by 10 for each phase.
+50 tasks, 50000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                     293.044        293.044        293.044          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                     Max            Min           Mean        Std Dev
+   ---------                     ---            ---           ----        -------
+   File creation                   0.000          0.000          0.000          0.000
+   File stat                       0.000          0.000          0.000          0.000
+   File read                      60.401         60.401         60.401          0.000
+   File removal                    0.000          0.000          0.000          0.000
+   Tree creation                   0.000          0.000          0.000          0.000
+   Tree removal                    0.000          0.000          0.000          0.000
+-- finished at 05/03/2021 21:29:49 --
+
+WARNING: S3 S3_final:556 (path:ior987) "libS3Remote": (null) 

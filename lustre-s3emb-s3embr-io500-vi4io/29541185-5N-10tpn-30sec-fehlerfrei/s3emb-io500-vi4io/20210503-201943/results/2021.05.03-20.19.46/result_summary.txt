@@ -1,0 +1,15 @@
+IO500 version io500-sc20_v3-77-g787c193dbc9b (standard)
+[RESULT]       ior-easy-write        3.402797 GiB/s : time 41.541 seconds [INVALID]
+[RESULT]    mdtest-easy-write        7.521344 kIOPS : time 33.107 seconds [INVALID]
+[      ]            timestamp        0.000000 kIOPS : time 0.001 seconds
+[RESULT]       ior-hard-write        0.296599 GiB/s : time 34.979 seconds [INVALID]
+[RESULT]    mdtest-hard-write        3.407721 kIOPS : time 41.576 seconds [INVALID]
+[RESULT]                 find        0.000000 kIOPS : time 0.000 seconds [INVALID]
+[RESULT]        ior-easy-read        2.401042 GiB/s : time 58.997 seconds
+[RESULT]     mdtest-easy-stat       28.530613 kIOPS : time 9.535 seconds
+[RESULT]        ior-hard-read        0.105555 GiB/s : time 98.433 seconds
+[RESULT]     mdtest-hard-stat       26.664488 kIOPS : time 6.362 seconds
+[RESULT]   mdtest-easy-delete        5.982134 kIOPS : time 41.299 seconds
+[RESULT]     mdtest-hard-read        3.822005 kIOPS : time 37.166 seconds
+[RESULT]   mdtest-hard-delete        5.044784 kIOPS : time 28.737 seconds
+[SCORE ] Bandwidth 0.711166 GiB/s : IOPS 0.000000 kiops : TOTAL 0.000000 [INVALID]

@@ -1,0 +1,42 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May  3 21:21:41 2021
+Command line        : ./ior -C -Q 1 -g -G 760951682 -k -e -o ./datafiles/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.05.03-21.21.40/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3embr-io500-vi4io-29541185 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey -O saveRankPerformanceDetailsCSV=./results/2021.05.03-21.21.40/ior-easy-write.csv
+Machine             : Linux m10540
+WARNING: S3 S3_init:544 (path:ior987) "libS3Remote": (null) 
+TestID              : 0
+StartTime           : Mon May  3 21:21:41 2021
+Path                : ./datafiles/ior-easy/ior_file_easy.00000000
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 5
+tasks               : 50
+clients per node    : 10
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 473.02 TiB
+stonewallingTime    : 30
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 601 max: 684 -- min data: 1.2 GiB mean data: 1.3 GiB time: 30.2s
+WARNING: Expected aggregate file size       = 520093696000000
+WARNING: Stat() of aggregate file size      = 104857600
+WARNING: Using actual aggregate bytes moved = 71722598400
+WARNING: Maybe caused by deadlineForStonewalling
+write     2037.93    1020.38    0.000006    10158080000 2048.00    0.047474   33.52      0.001729   33.56      0   
+WARNING: S3 S3_final:556 (path:ior987) "libS3Remote": (null) 

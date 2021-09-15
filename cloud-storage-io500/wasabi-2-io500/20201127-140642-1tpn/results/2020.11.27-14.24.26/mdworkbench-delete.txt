@@ -1,0 +1,6 @@
+Args: ./md-workbench "--process-reports" "-a" "S3-libs3" "--S3-libs3.host=s3.wasabisys.com:443" "--S3-libs3.secret-key=foo" "--S3-libs3.access-key=foo" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl" "-o=./datafiles/2020.11.27-14.24.26/mdworkbench" "-t=0.000000" "-O=1" "--run-info-file=./results/2020.11.27-14.24.26/mdworkbench.status" "-D=10" "-P=39" "-I=39" "-3"
+MD-Workbench total objects: 3120 workingset size: 2.902 MiB (version: 3.4.0+dev) time: 2020-11-27 15:30:11
+cleanup process max:76.02s min:74.94s mean: 75.48s balance:98.6 stddev:0.8 rate:7.8 iops/s objects:570 dsets: 20 rate:7.5 obj/s rate:0.263 dset/s op-max:1.0045e+00s (0 errs) delete(1.8900e-01s, 1.8971e-01s, 1.9039e-01s, 3.9492e-01s, 3.9638e-01s, 4.3015e-01s, 1.0045e+00s)
+0: cleanup process max:76.02s rate:5.3 iops/s objects:390 dsets: 10 rate:5.1 obj/s rate:0.132 dset/s op-max:5.2223e-01s (0 errs) delete(1.8900e-01s, 1.8958e-01s, 1.8985e-01s, 1.9050e-01s, 1.9567e-01s, 2.3056e-01s, 5.2223e-01s)
+1: cleanup process max:74.94s rate:2.5 iops/s objects:180 dsets: 10 rate:2.4 obj/s rate:0.133 dset/s op-max:1.0045e+00s (0 errs) delete(3.9411e-01s, 3.9499e-01s, 3.9554e-01s, 3.9730e-01s, 4.0532e-01s, 1.0045e+00s, 1.0045e+00s)
+Total runtime: 2792167s time: 2020-11-27 15:31:27

@@ -1,0 +1,99 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Dec 13 12:39:38 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+Machine             : Linux mg100
+WARNING: S3 S3_init:512 (path:ior777) "ErrorInternalError": We encountered an internal error. Please try again. 
+TestID              : 0
+StartTime           : Sun Dec 13 12:39:39 2020
+Path                : ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000000
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18.92 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2061500416 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2065694720 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2069889024 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2074083328 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2078277632 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2082471936 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2086666240 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2090860544 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2095054848 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2099249152 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2103443456 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2107637760 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2111832064 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2116026368 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2120220672 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2124414976 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2128609280 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2132803584 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2136997888 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2141192192 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2145386496 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2149580800 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2153775104 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2157969408 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2162163712 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2166358016 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2170552320 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2174746624 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2178940928 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2183135232 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2187329536 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2191523840 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2195718144 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2199912448 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2204106752 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2208301056 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2212495360 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2216689664 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2220883968 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2225078272 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2229272576 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2233466880 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2237661184 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2241855488 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2246049792 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2250244096 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2254438400 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2258632704 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2262827008 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2267021312 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2271215616 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2275409920 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2279604224 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2283798528 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2287992832 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2292187136 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2296381440 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy.00000001 during transfer 0 offset 2300575744 containing 8-byte ints (1 errors)
+WARNING: Incorrect data on read (58 errors found).
+
+Used Time Stamp 271 (0x10f) for Data Signature
+WARNING: Expected aggregate file size       = 20803747840000
+WARNING: Stat() of aggregate file size      = 4194304
+WARNING: Using actual aggregate bytes moved = 4609540096
+read      7.81       3.90       0.000114    10158080000 2048.00    0.070363   563.10     0.017462   563.16     0   
+WARNING: S3 S3_final:524 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 

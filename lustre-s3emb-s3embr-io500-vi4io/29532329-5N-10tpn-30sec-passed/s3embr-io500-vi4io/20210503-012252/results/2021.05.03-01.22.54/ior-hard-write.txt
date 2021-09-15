@@ -1,0 +1,42 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Mon May  3 01:24:01 2021
+Command line        : ./ior -C -Q 1 -g -G=760929674 -k -e -o ./datafiles/ior-hard/file -O stoneWallingStatusFile=./results/2021.05.03-01.22.54/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 30 -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3embr-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey -O saveRankPerformanceDetailsCSV=./results/2021.05.03-01.22.54/ior-hard-write.csv -O stoneWallingWearOut=1
+Machine             : Linux m10900
+WARNING: S3 S3_init:538 (path:ior987) "libS3Remote": (null) 
+TestID              : 0
+StartTime           : Mon May  3 01:24:01 2021
+Path                : ./datafiles/ior-hard/file
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: 0.0%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 5
+tasks               : 50
+clients per node    : 10
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 21.38 TiB
+stonewallingTime    : 30
+stoneWallingWearOut : 1
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 665 max: 671 -- min data: 0.0 GiB mean data: 0.0 GiB time: 30.0s
+WARNING: Expected aggregate file size       = 23504000000000
+WARNING: Stat() of aggregate file size      = 47008
+WARNING: Using actual aggregate bytes moved = 1577118400
+WARNING: Maybe caused by deadlineForStonewalling
+write     49.57      1107.29    30.13       45.91      45.91      0.041863   30.30      0.001101   30.34      0   
+WARNING: S3 S3_final:550 (path:ior987) "libS3Remote": (null) 

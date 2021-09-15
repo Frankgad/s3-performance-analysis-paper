@@ -1,0 +1,39 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Dec  6 22:42:09 2020
+Command line        : ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.12.06-22.02.18/ior-rnd/file -O stoneWallingStatusFile=./results/2020.12.06-22.02.18/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 4096 -s 1000000 -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+Machine             : Linux mg101
+WARNING: S3 S3_init:509 (path:ior777) "ErrorInternalError": We encountered an internal error. Please try again. 
+TestID              : 0
+StartTime           : Sun Dec  6 22:42:10 2020
+Path                : ./datafiles/2020.12.06-22.02.18/ior-rnd/file.00000000
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.12.06-22.02.18/ior-rnd/file
+access              : file-per-process
+type                : independent
+segments            : 1000000
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 7.63 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1141 max: 1141 -- min data: 0.0 GiB mean data: 0.0 GiB time: 657.0s
+WARNING: Expected aggregate file size       = 8192000000
+WARNING: Stat() of aggregate file size      = 0
+WARNING: Using actual aggregate bytes moved = 9347072
+read      0.000002   0.000586   657.07      4.00       4.00       3891612    3892269    3891953    3892269    0   
+WARNING: S3 S3_Delete:387 (path:_datafiles_20201206220218_iorrnd_file00000000-) "ErrorNoSuchKey": The specified key does not exist. 
+WARNING: S3 S3_final:521 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 

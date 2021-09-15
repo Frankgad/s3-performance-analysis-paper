@@ -1,0 +1,112 @@
+version         = io500-sc20_v3-77-g787c193dbc9b
+config-hash     = 68C5968E
+result-dir      = ./results/2021.05.03-00.15.57
+mode            = standard
+; START 2021-05-03 00:15:57
+; ERROR INVALID stonewall-time != 300s
+
+
+[ior-easy-write]
+t_start         = 2021-05-03 00:15:57
+exe             = ./ior -C -Q 1 -g -G 760914829 -k -e -o ./datafiles/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.05.03-00.15.57/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey -O saveRankPerformanceDetailsCSV=./results/2021.05.03-00.15.57/ior-easy-write.csv
+throughput-stonewall = 4.40
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 3.973448
+t_delta         = 35.9899
+t_end           = 2021-05-03 00:16:33
+
+[mdtest-easy-write]
+t_start         = 2021-05-03 00:16:33
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1647092623 -N 1 -d ./datafiles/mdtest-easy -x ./results/2021.05.03-00.15.57/mdtest-easy.stonewall -C -Y -W 30 --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-easy-write.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+rate-stonewall  = 8.638772
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 8.161130
+t_delta         = 35.7793
+t_end           = 2021-05-03 00:17:09
+
+[timestamp]
+t_start         = 2021-05-03 00:17:09
+score           = 0.000000
+t_delta         = 0.0008
+t_end           = 2021-05-03 00:17:09
+
+[ior-hard-write]
+t_start         = 2021-05-03 00:17:09
+exe             = ./ior -C -Q 1 -g -G=760925517 -k -e -o ./datafiles/ior-hard/file -O stoneWallingStatusFile=./results/2021.05.03-00.15.57/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -w -D 30 -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey -O saveRankPerformanceDetailsCSV=./results/2021.05.03-00.15.57/ior-hard-write.csv -O stoneWallingWearOut=1
+throughput-stonewall = 0.32
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 0.307377
+t_delta         = 36.5832
+t_end           = 2021-05-03 00:17:46
+
+[mdtest-hard-write]
+t_start         = 2021-05-03 00:17:46
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1647103311 -N 1 -F -d ./datafiles/mdtest-hard -x ./results/2021.05.03-00.15.57/mdtest-hard.stonewall -C -Y -W 30 --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-hard-write.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+rate-stonewall  = 3.608036
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 3.394601
+t_delta         = 39.4817
+t_end           = 2021-05-03 00:18:25
+
+[find]
+t_start         = 2021-05-03 00:18:25
+; ERROR INVALID Resulting score shouldn't be 0.0
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2021-05-03 00:18:25
+
+[ior-easy-read]
+t_start         = 2021-05-03 00:18:25
+exe             = ./ior -C -Q 1 -g -G 760914829 -k -e -o ./datafiles/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.05.03-00.15.57/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey -O saveRankPerformanceDetailsCSV=./results/2021.05.03-00.15.57/ior-easy-read.csv
+score           = 2.611785
+t_delta         = 54.7689
+t_end           = 2021-05-03 00:19:20
+
+[mdtest-easy-stat]
+t_start         = 2021-05-03 00:19:20
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1647092623 -N 1 -d ./datafiles/mdtest-easy -x ./results/2021.05.03-00.15.57/mdtest-easy.stonewall -T --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-easy-stat.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+score           = 29.067036
+t_delta         = 10.8168
+t_end           = 2021-05-03 00:19:31
+
+[ior-hard-read]
+t_start         = 2021-05-03 00:19:31
+exe             = ./ior -C -Q 1 -g -G=760925517 -k -e -o ./datafiles/ior-hard/file -O stoneWallingStatusFile=./results/2021.05.03-00.15.57/ior-hard.stonewall -t 47008 -b 47008 -s 10000000 -r -R -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey -O saveRankPerformanceDetailsCSV=./results/2021.05.03-00.15.57/ior-hard-read.csv
+score           = 0.127056
+t_delta         = 88.7916
+t_end           = 2021-05-03 00:21:00
+
+[mdtest-hard-stat]
+t_start         = 2021-05-03 00:21:00
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1647103311 -N 1 -F -d ./datafiles/mdtest-hard -x ./results/2021.05.03-00.15.57/mdtest-hard.stonewall -T --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-hard-stat.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+score           = 27.326517
+t_delta         = 6.0745
+t_end           = 2021-05-03 00:21:06
+
+[mdtest-easy-delete]
+t_start         = 2021-05-03 00:21:06
+exe             = ./mdtest -n 1000000 -u -L -F -P -G 1647092623 -N 1 -d ./datafiles/mdtest-easy -x ./results/2021.05.03-00.15.57/mdtest-easy.stonewall -r --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-easy-delete.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+score           = 7.541411
+t_delta         = 38.5195
+t_end           = 2021-05-03 00:21:44
+
+[mdtest-hard-read]
+t_start         = 2021-05-03 00:21:44
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1647103311 -N 1 -F -d ./datafiles/mdtest-hard -x ./results/2021.05.03-00.15.57/mdtest-hard.stonewall -E -X --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-hard-read.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+score           = 6.996283
+t_delta         = 19.6926
+t_end           = 2021-05-03 00:22:04
+
+[mdtest-hard-delete]
+t_start         = 2021-05-03 00:22:04
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -G=1647103311 -N 1 -F -d ./datafiles/mdtest-hard -x ./results/2021.05.03-00.15.57/mdtest-hard.stonewall -r --saveRankPerformanceDetails=./results/2021.05.03-00.15.57/mdtest-hard-delete.csv -a S3-libs3 --S3-libs3.host=/work/ku0598/s3bench/s3emb-io500-vi4io-29532329 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey
+score           = 5.525710
+t_delta         = 24.6973
+t_end           = 2021-05-03 00:22:29
+
+[SCORE]
+MD              = 0.000000
+BW              = 0.797889
+SCORE           = 0.000000 [INVALID]
+hash            = 9C78C96A
+; END 2021-05-03 01:07:37

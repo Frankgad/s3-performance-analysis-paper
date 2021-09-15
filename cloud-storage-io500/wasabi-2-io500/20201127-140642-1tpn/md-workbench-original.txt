@@ -1,0 +1,17 @@
+[1606483464.378657] [mg100:19364:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1606483464.380763] [mg100:19364:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1606483464.390778] [mg100:19364:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1606483464.388878] [mg104:3665 :0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1606483464.390847] [mg104:3665 :0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1606483464.400589] [mg104:3665 :0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+Args: /home/dkrz/k203134/tools/emb/io500/bin/md-workbench "-2" "--run-info-file=mdtest.status" "-a=S3-libs3" "--S3-libs3.host=s3.wasabisys.com:443" "--S3-libs3.access-key=foo" "--S3-libs3.secret-key=foo" "-R" "1" "--latency-all" "-D" "10" "-P" "300" "-I" "100" "-L" "/home/dkrz/k203134/tests/wasabi-2-io500/20201127-140642-1tpn/latency" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl"
+ERROR: [ERROR] Could not open mdtest.status for restart
+, (md-workbench.c:823)
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

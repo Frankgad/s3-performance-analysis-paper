@@ -1,0 +1,190 @@
+version         = io500-sc20_v3-20-gfe9e3d89faf7
+config-hash     = 65596426
+result-dir      = ./results/2020.12.06-00.26.45
+; START 2020-12-06 00:26:45
+
+
+[ior-easy-write]
+t_start         = 2020-12-06 00:26:46
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o ./datafiles/2020.12.06-00.26.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/ior-easy-write.txt
+accessed-pairs  = 2763
+throughput-stonewall = 0.07
+score           = 0.034177
+t_delta         = 316.1547
+t_end           = 2020-12-06 00:32:02
+
+[mdtest-easy-write]
+t_start         = 2020-12-06 00:32:02
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d ./datafiles/2020.12.06-00.26.45/mdtest-easy -x ./results/2020.12.06-00.26.45/mdtest-easy.stonewall -C -Y -W 300 -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-easy-write.txt
+time            = 301.454662
+rate-stonewall  = 0.081942
+score           = 0.081724
+t_delta         = 301.8983
+t_end           = 2020-12-06 00:37:04
+
+[mdworkbench-create]
+t_start         = 2020-12-06 00:37:04
+filesPerProc    = 245
+precreatePerSet = 245
+exe             = ./md-workbench --process-reports -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl -o=./datafiles/2020.12.06-00.26.45/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2020.12.06-00.26.45/mdworkbench.status -D=10 -P=245 -I=245 -1
+result-file     = ./results/2020.12.06-00.26.45/mdworkbench-create.txt
+maxOpTime       = 0.426161
+score           = 0.029609
+t_delta         = 166.2795
+t_end           = 2020-12-06 00:39:50
+
+[ior-rnd-write]
+t_start         = 2020-12-06 00:39:50
+exe             = ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.12.06-00.26.45/ior-rnd/file -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 4096 -s 1000000 -w -D 300 -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl -k
+result-file     = ./results/2020.12.06-00.26.45/ior-rnd-write.txt
+accessed-pairs  = 8766
+throughput-stonewall = 0.00
+score           = 0.000222
+t_delta         = 302.0972
+t_end           = 2020-12-06 00:44:52
+
+[timestamp]
+t_start         = 2020-12-06 00:44:52
+timestamp-file  = ./results/2020.12.06-00.26.45/timestampfile
+t_delta         = 0.0014
+t_end           = 2020-12-06 00:44:52
+
+[find-easy]
+t_start         = 2020-12-06 00:44:52
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2020-12-06 00:44:52
+
+[ior-hard-write]
+t_start         = 2020-12-06 00:44:52
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.12.06-00.26.45/ior-hard/file -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/ior-hard-write.txt
+accessed-pairs  = 8477
+throughput-stonewall = 0.00
+score           = 0.000330
+t_delta         = 302.6386
+t_end           = 2020-12-06 00:49:55
+
+[mdtest-hard-write]
+t_start         = 2020-12-06 00:49:55
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.06-00.26.45/mdtest-hard -x ./results/2020.12.06-00.26.45/mdtest-hard.stonewall -C -Y -W 300 -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-hard-write.txt
+time            = 301.431051
+rate-stonewall  = 0.030498
+score           = 0.030428
+t_delta         = 301.9319
+t_end           = 2020-12-06 00:54:57
+
+[find]
+t_start         = 2020-12-06 00:54:57
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2020-12-06 00:54:57
+
+[ior-rnd-read]
+t_start         = 2020-12-06 00:54:57
+exe             = ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.12.06-00.26.45/ior-rnd/file -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 4096 -s 1000000 -r -R -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/ior-rnd-read.txt
+score           = 0.000032
+t_delta         = 350.3593
+t_end           = 2020-12-06 01:00:47
+
+[find-hard]
+t_start         = 2020-12-06 01:00:47
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2020-12-06 01:00:47
+
+[mdworkbench-bench]
+t_start         = 2020-12-06 01:00:47
+filesPerProc    = 245
+precreatePerSet = 245
+exe             = ./md-workbench --process-reports -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl -o=./datafiles/2020.12.06-00.26.45/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2020.12.06-00.26.45/mdworkbench.status -D=10 -P=245 -I=245 -2 -R=2
+result-file     = ./results/2020.12.06-00.26.45/mdworkbench-bench.txt
+maxOpTime       = 0.490036
+scoreIteration0 = 0.047689
+maxOpTime0      = 0.407325
+score           = 0.047226
+t_delta         = 826.1428
+t_end           = 2020-12-06 01:14:33
+
+[ior-easy-read]
+t_start         = 2020-12-06 01:14:33
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o ./datafiles/2020.12.06-00.26.45/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/ior-easy-read.txt
+score           = 0.044310
+t_delta         = 244.1643
+t_end           = 2020-12-06 01:18:38
+
+[mdtest-easy-stat]
+t_start         = 2020-12-06 01:18:38
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d ./datafiles/2020.12.06-00.26.45/mdtest-easy -x ./results/2020.12.06-00.26.45/mdtest-easy.stonewall -T -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-easy-stat.txt
+time            = 169.801367
+score           = 0.145087
+t_delta         = 170.6037
+t_end           = 2020-12-06 01:21:28
+
+[ior-hard-read]
+t_start         = 2020-12-06 01:21:28
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.12.06-00.26.45/ior-hard/file -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/ior-hard-read.txt
+score           = 0.005460
+t_delta         = 136.2430
+t_end           = 2020-12-06 01:23:44
+
+[mdtest-hard-stat]
+t_start         = 2020-12-06 01:23:44
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.06-00.26.45/mdtest-hard -x ./results/2020.12.06-00.26.45/mdtest-hard.stonewall -T -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-hard-stat.txt
+time            = 61.293954
+score           = 0.149640
+t_delta         = 61.6676
+t_end           = 2020-12-06 01:24:46
+
+[mdworkbench-delete]
+t_start         = 2020-12-06 01:24:46
+filesPerProc    = 245
+precreatePerSet = 245
+exe             = ./md-workbench --process-reports -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl -o=./datafiles/2020.12.06-00.26.45/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2020.12.06-00.26.45/mdworkbench.status -D=10 -P=245 -I=245 -3
+result-file     = ./results/2020.12.06-00.26.45/mdworkbench-delete.txt
+maxOpTime       = 0.354587
+score           = 0.036366
+t_delta         = 135.3962
+t_end           = 2020-12-06 01:27:02
+
+[mdtest-easy-delete]
+t_start         = 2020-12-06 01:27:02
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d ./datafiles/2020.12.06-00.26.45/mdtest-easy -x ./results/2020.12.06-00.26.45/mdtest-easy.stonewall -r -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-easy-delete.txt
+time            = 703.553060
+score           = 0.035017
+t_delta         = 704.0136
+t_end           = 2020-12-06 01:38:46
+
+[mdtest-hard-read]
+t_start         = 2020-12-06 01:38:46
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.06-00.26.45/mdtest-hard -x ./results/2020.12.06-00.26.45/mdtest-hard.stonewall -E -X -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-hard-read.txt
+time            = 130.921648
+score           = 0.070057
+t_delta         = 132.0475
+t_end           = 2020-12-06 01:40:58
+
+[mdtest-hard-delete]
+t_start         = 2020-12-06 01:40:58
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.06-00.26.45/mdtest-hard -x ./results/2020.12.06-00.26.45/mdtest-hard.stonewall -r -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+result-file     = ./results/2020.12.06-00.26.45/mdtest-hard-delete.txt
+time            = 260.184426
+score           = 0.035252
+t_delta         = 261.2246
+t_end           = 2020-12-06 01:45:19
+
+[SCORE]
+MD              = 0.000000
+BW              = 0.001642
+SCORE           = 0.000000 
+hash            = 61CAE837
+; END 2020-12-06 01:58:11

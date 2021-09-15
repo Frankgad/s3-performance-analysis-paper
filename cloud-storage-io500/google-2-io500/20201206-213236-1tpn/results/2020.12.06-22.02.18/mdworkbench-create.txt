@@ -1,0 +1,6 @@
+Args: ./md-workbench "--process-reports" "-a" "S3-libs3" "--S3-libs3.host=storage.googleapis.com" "--S3-libs3.secret-key=foo" "--S3-libs3.access-key=foo" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl" "-o=./datafiles/2020.12.06-22.02.18/mdworkbench" "-t=0.000000" "-O=1" "--run-info-file=./results/2020.12.06-22.02.18/mdworkbench.status" "-D=10" "-P=7" "-I=7" "-1"
+MD-Workbench total objects: 560 workingset size: 0.521 MiB (version: 3.4.0+dev) time: 2020-12-06 22:17:35
+precreate process max:93.53s min:87.65s mean: 90.59s balance:93.7 stddev:4.2 rate:2.7 iops/s dsets: 20 objects:230 rate:0.214 dset/s rate:2.5 obj/s tp:0.0 MiB/s op-max:1.2666e+00s (0 errs) create(5.4697e-01s, 5.6795e-01s, 8.9046e-01s, 1.1739e+00s, 1.2049e+00s, 1.2666e+00s, 1.2666e+00s)
+0: precreate process max:87.65s rate:0.9 iops/s dsets: 10 objects:70 rate:0.114 dset/s rate:0.8 obj/s tp:0.0 MiB/s op-max:1.2666e+00s (0 errs) create(1.1354e+00s, 1.1569e+00s, 1.1735e+00s, 1.2014e+00s, 1.2272e+00s, 0.0000e+00s, 1.2666e+00s)
+1: precreate process max:93.53s rate:1.8 iops/s dsets: 10 objects:160 rate:0.107 dset/s rate:1.7 obj/s tp:0.0 MiB/s op-max:6.4552e-01s (0 errs) create(5.3884e-01s, 5.5872e-01s, 5.6620e-01s, 5.7418e-01s, 5.9958e-01s, 6.4552e-01s, 6.4552e-01s)
+Total runtime: 7483882s time: 2020-12-06 22:19:09

@@ -1,0 +1,38 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Dec  6 22:56:01 2020
+Command line        : ./ior -C -Q 1 -g -G 271 -k -e -o ./datafiles/2020.12.06-22.02.18/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.12.06-22.02.18/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+Machine             : Linux mg101
+WARNING: S3 S3_init:509 (path:ior777) "ErrorBucketAlreadyOwnedByYou": Your previous request to create the named bucket succeeded and you already own it. 
+TestID              : 0
+StartTime           : Sun Dec  6 22:56:02 2020
+Path                : ./datafiles/2020.12.06-22.02.18/ior-easy/ior_file_easy.00000000
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.12.06-22.02.18/ior-easy/ior_file_easy
+access              : file-per-process
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 2 MiB
+blocksize           : 9.46 TiB
+aggregate filesize  : 18.92 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: Expected aggregate file size       = 20803747840000
+WARNING: Stat() of aggregate file size      = 4194304
+WARNING: Using actual aggregate bytes moved = 1728053248
+read      0.919062   0.459567   0.000062    10158080000 2048.00    1486.87    1792.99    1645.98    1793.13    0   
+WARNING: S3 S3_final:521 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 

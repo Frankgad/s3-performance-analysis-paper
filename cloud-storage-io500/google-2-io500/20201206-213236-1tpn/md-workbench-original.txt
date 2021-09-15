@@ -1,0 +1,19 @@
+[1607288532.953075] [mg101:30071:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1607288532.955038] [mg101:30071:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607288532.964528] [mg101:30071:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607288532.991321] [mg103:22732:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2500.00
+[1607288532.993538] [mg103:22732:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607288533.004027] [mg103:22732:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+Args: /home/dkrz/k203134/tools/emb/io500/bin/md-workbench "-2" "--run-info-file=mdworkbench.status" "-a=S3-libs3" "--S3-libs3.host=storage.googleapis.com" "--S3-libs3.access-key=foo" "--S3-libs3.secret-key=foo" "-R" "1" "--latency-all" "-D" "10" "-P" "300" "-I" "100" "-L" "/home/dkrz/k203134/tests/ibm-2-io500/20201206-213236-1tpn/latency" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl" "--S3-libs3.bucket-name-prefix=20201206-213236"
+WARNING: S3 S3_init:509 (path:ior777) "ErrorInternalError": We encountered an internal error. Please try again. 
+WARNING: S3 S3_init:509 (path:ior777) "ErrorBucketAlreadyOwnedByYou": Your previous request to create the named bucket succeeded and you already own it. 
+ERROR: [ERROR] Could not open mdworkbench.status for restart
+, (md-workbench.c:823)
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------

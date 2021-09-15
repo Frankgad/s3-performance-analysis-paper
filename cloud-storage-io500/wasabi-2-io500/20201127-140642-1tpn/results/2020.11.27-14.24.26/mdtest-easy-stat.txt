@@ -1,0 +1,32 @@
+-- started at 11/27/2020 15:20:59 --
+
+mdtest-3.4.0+dev was launched with 2 total task(s) on 2 node(s)
+Command line used: ./mdtest '-n' '1000000' '-u' '-L' '-F' '-P' '-N' '1' '-d' './datafiles/2020.11.27-14.24.26/mdtest-easy' '-x' './results/2020.11.27-14.24.26/mdtest-easy.stonewall' '-T' '-a' 'S3-libs3' '--S3-libs3.host=s3.wasabisys.com:443' '--S3-libs3.secret-key=foo' '--S3-libs3.access-key=foo' '--S3-libs3.s3-compatible' '--S3-libs3.use-ssl'
+Path                : ./datafiles/2020.11.27-14.24.26/mdtest-easy
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+Nodemap: 10
+V-0: Rank   0 Line  2184 Shifting ranks by 1 for each phase.
+2 tasks, 2000000 files
+
+SUMMARY rate: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :         20.919         10.041         15.480          5.439
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+
+SUMMARY time: (of 1 iterations)
+   Operation                      Max            Min           Mean        Std Dev
+   ---------                      ---            ---           ----        -------
+   File creation             :          0.000          0.000          0.000          0.000
+   File stat                 :        590.953        283.659        437.306        153.647
+   File read                 :          0.000          0.000          0.000          0.000
+   File removal              :          0.000          0.000          0.000          0.000
+   Tree creation             :          0.000          0.000          0.000          0.000
+   Tree removal              :          0.000          0.000          0.000          0.000
+-- finished at 11/27/2020 15:25:43 --
+
+WARNING: S3 S3_final:521 (path:ior813) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty 

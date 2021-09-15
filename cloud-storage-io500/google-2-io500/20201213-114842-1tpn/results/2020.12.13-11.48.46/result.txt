@@ -1,0 +1,192 @@
+version         = io500-sc20_v3-28-g9aa5e131ad3b
+config-hash     = 65B3F556
+result-dir      = ./results/2020.12.13-11.48.46
+; START 2020-12-13 11:48:47
+
+
+[ior-easy-write]
+t_start         = 2020-12-13 11:48:55
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 300 -O stoneWallingWearOut=1 -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/ior-easy-write.txt
+accessed-pairs  = 1099
+throughput-stonewall = 0.01
+score           = 0.013040
+t_delta         = 332.4737
+t_end           = 2020-12-13 11:54:27
+
+[mdtest-easy-write]
+t_start         = 2020-12-13 11:54:27
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d ./datafiles/2020.12.13-11.48.46/mdtest-easy -x ./results/2020.12.13-11.48.46/mdtest-easy.stonewall -C -Y -W 300 -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-easy-write.txt
+time            = 300.571656
+rate-stonewall  = 0.021809
+score           = 0.021785
+t_delta         = 303.9368
+t_end           = 2020-12-13 11:59:31
+
+[mdworkbench-create]
+t_start         = 2020-12-13 11:59:31
+filesPerProc    = 65
+precreatePerSet = 65
+exe             = ./md-workbench --process-reports -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU -o=./datafiles/2020.12.13-11.48.46/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2020.12.13-11.48.46/mdworkbench.status -D=10 -P=65 -I=65 -1
+result-file     = ./results/2020.12.13-11.48.46/mdworkbench-create.txt
+maxOpTime       = 0.636983
+score           = 0.008057
+t_delta         = 166.9879
+t_end           = 2020-12-13 12:02:18
+
+[ior-rnd-write]
+t_start         = 2020-12-13 12:02:18
+exe             = ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.12.13-11.48.46/ior-rnd/file -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 1073741824 -s 10000000 -w -D 300 -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU -k
+result-file     = ./results/2020.12.13-11.48.46/ior-rnd-write.txt
+accessed-pairs  = 2797
+throughput-stonewall = 0.00
+score           = 0.000071
+t_delta         = 303.5294
+t_end           = 2020-12-13 12:07:22
+
+[timestamp]
+t_start         = 2020-12-13 12:07:22
+timestamp-file  = ./results/2020.12.13-11.48.46/timestampfile
+t_delta         = 0.0013
+t_end           = 2020-12-13 12:07:22
+
+[find-easy]
+t_start         = 2020-12-13 12:07:22
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2020-12-13 12:07:22
+
+[ior-hard-write]
+t_start         = 2020-12-13 12:07:22
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.12.13-11.48.46/ior-hard/file -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -w -D 300 -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/ior-hard-write.txt
+accessed-pairs  = 2724
+throughput-stonewall = 0.00
+score           = 0.000105
+t_delta         = 302.3149
+t_end           = 2020-12-13 12:12:24
+
+[mdtest-hard-write]
+t_start         = 2020-12-13 12:12:24
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.13-11.48.46/mdtest-hard -x ./results/2020.12.13-11.48.46/mdtest-hard.stonewall -C -Y -W 300 -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-hard-write.txt
+time            = 300.620864
+rate-stonewall  = 0.008362
+score           = 0.008356
+t_delta         = 304.6677
+t_end           = 2020-12-13 12:17:29
+
+[find]
+t_start         = 2020-12-13 12:17:29
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2020-12-13 12:17:29
+
+[ior-rnd-read]
+t_start         = 2020-12-13 12:17:29
+exe             = ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.12.13-11.48.46/ior-rnd/file -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 1073741824 -s 10000000 -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/ior-rnd-read.txt
+; ERROR INVALID Errors (18) occured during phase in IOR. This invalidates your run.
+score           = 0.000010
+t_delta         = 526.8018
+t_end           = 2020-12-13 12:26:15
+
+[find-hard]
+t_start         = 2020-12-13 12:26:15
+score           = 0.000000
+t_delta         = 0.0000
+t_end           = 2020-12-13 12:26:15
+
+[mdworkbench-bench]
+t_start         = 2020-12-13 12:26:15
+filesPerProc    = 65
+precreatePerSet = 65
+exe             = ./md-workbench --process-reports -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU -o=./datafiles/2020.12.13-11.48.46/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2020.12.13-11.48.46/mdworkbench.status -D=10 -P=65 -I=65 -2 -R=2
+result-file     = ./results/2020.12.13-11.48.46/mdworkbench-bench.txt
+maxOpTime       = 0.651112
+scoreIteration0 = 0.013157
+maxOpTime0      = 0.474299
+score           = 0.012830
+t_delta         = 802.8202
+t_end           = 2020-12-13 12:39:38
+
+[ior-easy-read]
+t_start         = 2020-12-13 12:39:38
+exe             = ./ior -C -Q 1 -g -G 271 -k -e -o ./datafiles/2020.12.13-11.48.46/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-easy.stonewall -t 2m -b 9920000m -F -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/ior-easy-read.txt
+; ERROR INVALID Errors (116) occured during phase in IOR. This invalidates your run.
+score           = 0.007623
+t_delta         = 566.7901
+t_end           = 2020-12-13 12:49:05
+
+[mdtest-easy-stat]
+t_start         = 2020-12-13 12:49:05
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d ./datafiles/2020.12.13-11.48.46/mdtest-easy -x ./results/2020.12.13-11.48.46/mdtest-easy.stonewall -T -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-easy-stat.txt
+time            = 128.133872
+score           = 0.051103
+t_delta         = 131.2857
+t_end           = 2020-12-13 12:51:16
+
+[ior-hard-read]
+t_start         = 2020-12-13 12:51:16
+exe             = ./ior -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.12.13-11.48.46/ior-hard/file -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/ior-hard-read.txt
+score           = 0.001350
+t_delta         = 179.1540
+t_end           = 2020-12-13 12:54:15
+
+[mdtest-hard-stat]
+t_start         = 2020-12-13 12:54:15
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.13-11.48.46/mdtest-hard -x ./results/2020.12.13-11.48.46/mdtest-hard.stonewall -T -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-hard-stat.txt
+time            = 50.772870
+score           = 0.049475
+t_delta         = 53.1970
+t_end           = 2020-12-13 12:55:09
+
+[mdworkbench-delete]
+t_start         = 2020-12-13 12:55:09
+filesPerProc    = 65
+precreatePerSet = 65
+exe             = ./md-workbench --process-reports -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU -o=./datafiles/2020.12.13-11.48.46/mdworkbench -t=0.000000 -O=1 --run-info-file=./results/2020.12.13-11.48.46/mdworkbench.status -D=10 -P=65 -I=65 -3
+result-file     = ./results/2020.12.13-11.48.46/mdworkbench-delete.txt
+maxOpTime       = 0.696295
+score           = 0.009439
+t_delta         = 143.9617
+t_end           = 2020-12-13 12:57:33
+
+[mdtest-easy-delete]
+t_start         = 2020-12-13 12:57:33
+exe             = ./mdtest -n 1000000 -u -L -F -P -N 1 -d ./datafiles/2020.12.13-11.48.46/mdtest-easy -x ./results/2020.12.13-11.48.46/mdtest-easy.stonewall -r -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-easy-delete.txt
+time            = 698.845768
+score           = 0.009370
+t_delta         = 702.9447
+t_end           = 2020-12-13 13:09:16
+
+[mdtest-hard-read]
+t_start         = 2020-12-13 13:09:16
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.13-11.48.46/mdtest-hard -x ./results/2020.12.13-11.48.46/mdtest-hard.stonewall -E -X -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-hard-read.txt
+time            = 132.927360
+score           = 0.018898
+t_delta         = 134.9851
+t_end           = 2020-12-13 13:11:31
+
+[mdtest-hard-delete]
+t_start         = 2020-12-13 13:11:31
+exe             = ./mdtest -n 1000000 -t -w 3901 -e 3901 -P -N 1 -F -d ./datafiles/2020.12.13-11.48.46/mdtest-hard -x ./results/2020.12.13-11.48.46/mdtest-hard.stonewall -r -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+result-file     = ./results/2020.12.13-11.48.46/mdtest-hard-delete.txt
+time            = 265.103382
+score           = 0.009476
+t_delta         = 267.6603
+t_end           = 2020-12-13 13:15:58
+
+[SCORE]
+MD              = 0.000000
+BW              = 0.000464
+SCORE           = 0.000000  [INVALID]
+hash            = 14C54E81
+; END 2020-12-13 13:29:40

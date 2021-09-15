@@ -1,0 +1,13 @@
+[1607286757.695162] [mg101:19795:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1607286757.697138] [mg101:19795:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607286757.706857] [mg101:19795:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607286763.516362] [mg103:19324:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2500.00
+[1607286763.535835] [mg103:19324:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1607286763.563327] [mg103:19324:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+Args: /home/dkrz/k203134/tools/emb/io500/bin/md-workbench "-1" "-a=S3-libs3" "--S3-libs3.host=storage.googleapis.com" "--S3-libs3.access-key=foo" "--S3-libs3.secret-key=foo" "-R" "1" "--latency-all" "-D" "10" "-P" "300" "-I" "100" "-L" "/home/dkrz/k203134/tests/ibm-2-io500/20201206-213236-1tpn/latency" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl" "--S3-libs3.bucket-name-prefix=20201206-213236"
+MD-Workbench total objects: 8000 workingset size: 22.322 MiB (version: 3.4.0+dev) time: 2020-12-06 21:32:44
+WARNING: S3 S3_init:509 (path:ior777) "ErrorBucketAlreadyOwnedByYou": Your previous request to create the named bucket succeeded and you already own it. 
+precreate process max:3679.63s min:1737.05s mean: 2708.34s balance:47.2 stddev:1373.6 rate:1.6 iops/s dsets: 20 objects:6000 rate:0.005 dset/s rate:1.6 obj/s tp:0.0 MiB/s op-max:2.4595e+00s (0 errs) create(5.3760e-01s, 5.6564e-01s, 1.1285e+00s, 1.1943e+00s, 1.2586e+00s, 1.5524e+00s, 2.4595e+00s)
+WARNING: S3 S3_final:521 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 
+WARNING: S3 S3_final:521 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 
+Total runtime: 7481763s time: 2020-12-06 22:02:12

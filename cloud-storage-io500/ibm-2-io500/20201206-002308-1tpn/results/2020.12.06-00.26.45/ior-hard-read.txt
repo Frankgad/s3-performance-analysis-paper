@@ -1,0 +1,39 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Dec  6 01:21:28 2020
+Command line        : ./ior -C -Q 1 -g -G 27 -k -e -o ./datafiles/2020.12.06-00.26.45/ior-hard/file -O stoneWallingStatusFile=./results/2020.12.06-00.26.45/ior-hard.stonewall -O stoneWallingWearOut=1 -t 47008 -b 47008 -s 10000000 -r -R -a S3-libs3 --S3-libs3.host=s3.eu-de.cloud-object-storage.appdomain.cloud:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+Machine             : Linux mg100
+WARNING: S3 S3_init:509 (path:ior96) "ErrorBucketAlreadyExists": The requested bucket name is not available. The bucket namespace is shared by all users of the system. Please select a different name and try again. 
+TestID              : 0
+StartTime           : Sun Dec  6 01:21:28 2020
+Path                : ./datafiles/2020.12.06-00.26.45/ior-hard/file
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.12.06-00.26.45/ior-hard/file
+access              : single-shared-file
+type                : independent
+segments            : 10000000
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 47008 bytes
+blocksize           : 47008 bytes
+aggregate filesize  : 875.59 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 8477 max: 8477 -- min data: 0.4 GiB mean data: 0.4 GiB time: 135.8s
+WARNING: Expected aggregate file size       = 940160000000
+WARNING: Stat() of aggregate file size      = 47008
+WARNING: Using actual aggregate bytes moved = 796973632
+read      5.59       124.73     135.92      45.91      45.91      0.020783   135.93     0.008511   135.94     0   
+WARNING: S3 S3_final:521 (path:ior96) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 

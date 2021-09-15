@@ -1,0 +1,12 @@
+[1606482402.583064] [mg104:47292:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1606482402.584869] [mg104:47292:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1606482402.594290] [mg104:47292:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1606482403.306587] [mg100:11377:0]         sys.c:744  MXM  WARN  Conflicting CPU frequencies detected, using: 2501.00
+[1606482403.331363] [mg100:11377:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+[1606482403.342607] [mg100:11377:0]         mxm.c:196  MXM  WARN  The 'ulimit -s' on the system is set to 'unlimited'. This may have negative performance implications. Please set the stack size to the default value (10240) 
+Args: /home/dkrz/k203134/tools/emb/io500/bin/md-workbench "-1" "-a=S3-libs3" "--S3-libs3.host=s3.wasabisys.com:443" "--S3-libs3.access-key=foo" "--S3-libs3.secret-key=foo" "-R" "1" "--latency-all" "-D" "10" "-P" "300" "-I" "100" "-L" "/home/dkrz/k203134/tests/wasabi-2-io500/20201127-140642-1tpn/latency" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl"
+MD-Workbench total objects: 8000 workingset size: 22.322 MiB (version: 3.4.0+dev) time: 2020-11-27 14:06:44
+WARNING: S3 S3_final:521 (path:ior813) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty 
+precreate process max:2150.28s min:1059.21s mean: 1604.74s balance:49.3 stddev:771.5 rate:2.8 iops/s dsets: 20 objects:6000 rate:0.009 dset/s rate:2.8 obj/s tp:0.0 MiB/s op-max:2.4145e+00s (0 errs) create(3.0247e-01s, 3.3631e-01s, 6.3074e-01s, 6.8485e-01s, 7.4670e-01s, 1.2151e+00s, 2.4145e+00s)
+WARNING: S3 S3_final:521 (path:ior813) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty 
+Total runtime: 2788143s time: 2020-11-27 14:24:23

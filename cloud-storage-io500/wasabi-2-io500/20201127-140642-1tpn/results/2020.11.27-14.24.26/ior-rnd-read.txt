@@ -1,0 +1,37 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Fri Nov 27 15:05:43 2020
+Command line        : ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.11.27-14.24.26/ior-rnd/file -O stoneWallingStatusFile=./results/2020.11.27-14.24.26/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 4096 -s 1000000 -r -R -a S3-libs3 --S3-libs3.host=s3.wasabisys.com:443 --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl
+Machine             : Linux mg100
+TestID              : 0
+StartTime           : Fri Nov 27 15:05:43 2020
+Path                : ./datafiles/2020.11.27-14.24.26/ior-rnd/file.00000000
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.11.27-14.24.26/ior-rnd/file
+access              : file-per-process
+type                : independent
+segments            : 1000000
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 4096 bytes
+aggregate filesize  : 7.63 GiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+stonewalling pairs accessed min: 1188 max: 1188 -- min data: 0.0 GiB mean data: 0.0 GiB time: 174.3s
+WARNING: Expected aggregate file size       = 8192000000
+WARNING: Stat() of aggregate file size      = 0
+WARNING: Using actual aggregate bytes moved = 9732096
+read      0.000003   0.000787   174.32      4.00       4.00       3017590    3017953    3017779    3017953    0   
+WARNING: S3 S3_final:521 (path:ior813) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty 

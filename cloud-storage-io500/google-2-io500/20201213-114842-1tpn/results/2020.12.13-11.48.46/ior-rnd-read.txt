@@ -1,0 +1,51 @@
+WARNING: fsync() not supported in selected backend.  Using value of 0.
+IOR-3.4.0+dev: MPI Coordinated Test of Parallel I/O
+Began               : Sun Dec 13 12:17:29 2020
+Command line        : ./ior -Q 1 -F -g -G 4711 -z --random-offset-seed=11 -e -o ./datafiles/2020.12.13-11.48.46/ior-rnd/file -O stoneWallingStatusFile=./results/2020.12.13-11.48.46/ior-rnd.stonewall -O stoneWallingWearOut=1 -t 4096 -b 1073741824 -s 10000000 -r -R -a S3-libs3 --S3-libs3.host=storage.googleapis.com --S3-libs3.secret-key=foo --S3-libs3.access-key=foo --S3-libs3.s3-compatible --S3-libs3.use-ssl --S3-libs3.location=EU
+Machine             : Linux mg100
+WARNING: S3 S3_init:512 (path:ior777) "ErrorBucketAlreadyOwnedByYou": Your previous request to create the named bucket succeeded and you already own it. 
+TestID              : 0
+StartTime           : Sun Dec 13 12:17:30 2020
+Path                : ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000
+FS                  : 0.0 GiB   Used FS: 0.0%   Inodes: 0.0 Mi   Used Inodes: -inf%
+
+Options: 
+api                 : S3-libs3
+apiVersion          : 0.5
+test filename       : ./datafiles/2020.12.13-11.48.46/ior-rnd/file
+access              : file-per-process
+type                : independent
+segments            : 10000000
+ordering in a file  : random
+ordering inter file : no tasks offsets
+nodes               : 2
+tasks               : 2
+clients per node    : 1
+repetitions         : 1
+xfersize            : 4096 bytes
+blocksize           : 1 GiB
+aggregate filesize  : 19531.25 TiB
+
+Results: 
+
+access    bw(MiB/s)  IOPS       Latency(s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ----       ----------  ---------- ---------  --------   --------   --------   --------   ----
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 138719232 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 176263168 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 99958784 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 520192000 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 863989760 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 778301440 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 256745472 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 541532160 containing 8-byte ints (1 errors)
+WARNING: [0] FAILED comparison of buffer in file ./datafiles/2020.12.13-11.48.46/ior-rnd/file.00000000 during transfer 0 offset 85467136 containing 8-byte ints (1 errors)
+stonewalling pairs accessed min: 2797 max: 2797 -- min data: 0.0 GiB mean data: 0.0 GiB time: 163.1s
+WARNING: Incorrect data on read (9 errors found).
+
+Used Time Stamp 4711 (0x1267) for Data Signature
+WARNING: Expected aggregate file size       = 21474836480000000
+WARNING: Stat() of aggregate file size      = 0
+WARNING: Using actual aggregate bytes moved = 22913024
+read      0.010222   2.62       0.000622    1048576    4.00       1974.71    2137.73    1974.67    2137.80    0   
+WARNING: S3 S3_Delete:390 (path:_datafiles_20201213114846_iorrnd_file00000000b) "ErrorNoSuchKey": The specified key does not exist. 
+WARNING: S3 S3_final:524 (path:ior777) "ErrorBucketNotEmpty": The bucket you tried to delete is not empty. 

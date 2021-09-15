@@ -1,0 +1,20 @@
+version         = io500-sc20_v3-72-g4a5dde36301e
+config-hash     = 76F8A12B
+result-dir      = ./results/2021.04.20-08.24.41
+mode            = extended
+; START 2021-04-20 08:24:41
+; ERROR INVALID stonewall-time != 300s
+
+
+[ior-easy-write]
+t_start         = 2021-04-20 08:24:41
+exe             = ./ior -C -Q 1 -g -G 745481283 -k -e -o ./datafiles/ior-easy/ior_file_easy -O stoneWallingStatusFile=./results/2021.04.20-08.24.41/ior-easy.stonewall -t 2m -b 9920000m -F -w -D 30 -O stoneWallingWearOut=1 -a S3-libs3 --S3-libs3.host=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/s3embr-io500-vi4io-29302693 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey --S3-libs3.bucket-per-file -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.24.41/ior-easy-write.csv
+throughput-stonewall = 2.08
+; ERROR INVALID Runtime is smaller than expected minimum runtime
+score           = 2.018420
+t_delta         = 35.2162
+t_end           = 2021-04-20 08:25:17
+
+[ior-rnd-write]
+t_start         = 2021-04-20 08:25:17
+exe             = ./ior -Q=1 -g -G=-1329284797 -z --random-offset-seed=11 -e -o=./datafiles/ior-rnd/file -O stoneWallingStatusFile=./results/2021.04.20-08.24.41/ior-rnd.stonewall -O stoneWallingWearOut=1 -t=4096 -b=1073741824 -s=10000000 -w -D 30 -a S3-libs3 --S3-libs3.host=/mnt/lustre02/work/ka1094/k2020/frank/s3bench/s3embr-io500-vi4io-29302693 --S3-libs3.secret-key=secretkey --S3-libs3.access-key=accesskey --S3-libs3.bucket-per-file -k -O saveRankPerformanceDetailsCSV=./results/2021.04.20-08.24.41/ior-rnd-write.csv

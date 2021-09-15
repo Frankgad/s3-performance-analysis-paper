@@ -1,0 +1,6 @@
+Args: ./md-workbench "--process-reports" "-a" "S3-libs3" "--S3-libs3.host=storage.googleapis.com" "--S3-libs3.secret-key=foo" "--S3-libs3.access-key=foo" "--S3-libs3.s3-compatible" "--S3-libs3.use-ssl" "-o=./datafiles/2020.12.06-22.02.18/mdworkbench" "-t=0.000000" "-O=1" "--run-info-file=./results/2020.12.06-22.02.18/mdworkbench.status" "-D=10" "-P=7" "-I=7" "-3"
+MD-Workbench total objects: 560 workingset size: 0.521 MiB (version: 3.4.0+dev) time: 2020-12-06 23:07:42
+cleanup process max:71.64s min:63.59s mean: 67.62s balance:88.8 stddev:5.7 rate:3.5 iops/s objects:230 dsets: 20 rate:3.2 obj/s rate:0.279 dset/s op-max:1.4149e+00s (0 errs) delete(2.5601e-01s, 3.6034e-01s, 5.4860e-01s, 1.1388e+00s, 1.3471e+00s, 1.4149e+00s, 1.4149e+00s)
+0: cleanup process max:71.64s rate:1.1 iops/s objects:70 dsets: 10 rate:1.0 obj/s rate:0.140 dset/s op-max:1.4149e+00s (0 errs) delete(5.2738e-01s, 5.4635e-01s, 9.4419e-01s, 1.2841e+00s, 1.3594e+00s, -1.8985e+15s, 1.4149e+00s)
+1: cleanup process max:63.59s rate:2.7 iops/s objects:160 dsets: 10 rate:2.5 obj/s rate:0.157 dset/s op-max:7.1824e-01s (0 errs) delete(2.5406e-01s, 2.6658e-01s, 3.5746e-01s, 3.9415e-01s, 5.7684e-01s, 7.1824e-01s, 7.1824e-01s)
+Total runtime: 7490085s time: 2020-12-06 23:08:47
